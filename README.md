@@ -1,34 +1,27 @@
-# Acute Lymphoblastic Leukemia Classification using ResNet50
+# Acute Lymphoblastic Leukemia Classification (ResNet50)
 
-Acute Lymphoblastic Leukemia Classifier using ResNet50 and Transfer Learning
+This repository contains a Deep Learning project focused on detecting leukemic lymphoblasts in blood smear images. As a Biomedical Engineering student, my goal was to take my first steps in the Medical AI field by building a CNN with clinical diagnostic purposes.
 
-This project focuses on the automated classification of leukemic lymphoblasts using Deep Learning. Developed as a first attempt to test the Deep Learning knowledge I aquired over the last months and to serve as a link between **Biomedical Engineering** and **Deep Learning**. This project evaluates the efficacy of Transfer Learning and fine-tuning strategies in the context of medical diagnostics.
+## Project Overview
+The model uses a **ResNet50** backbone with **Transfer Learning**. The main challenge addressed was the morphological similarity between healthy and malignant cells, alongside significant class imbalance.
 
-## Abstract
-The diagnosis of Acute Lymphoblastic Leukemia (ALL) traditionally relies on manual morphological assessment, a process susceptible to subjective thinking and errors caused by fatigue. This study implements a ResNet50-based convolutional neural network (CNN) to classify cells into healthy and leukemic categories. By employing a two-phase training strategy and class-weight balancing, the model achieves a precision of 85.04% and a specificity of 96.00%.
+* **Final Accuracy:** 83.28%
+* **Precision:** 85.04%
+* **Specificity:** 96.00%
+* **Sensitivity:** 55.82% 
 
-## Methodology
-The technical approach is divided into three primary stages:
-1. **Preprocessing:** Image normalization and data augmentation to enhance model generalization.
-2. **Phase 1 Training:** Feature extraction by freezing the ResNet50 backbone and training the fully connected classification head.
-3. **Phase 2 Training:** Global fine-tuning of the entire architecture with a reduced learning rate to optimize weight convergence.
+## Key Files
+* [**Technical Paper (PDF)**](./Acute_Lymphoblastic_Leukemia_Classifier.pdf): Detailed analysis of the decisions made through the development of the model, results obtained and discussion. 
+* [**Implementation Notebook**](./Acute_Lymphoblastic_Leukemia_Classifier.ipynb): Documented Python code with TensorFlow/Keras.
 
-## Performance Analysis
-The model's performance was evaluated using standard metrics, including Accuracy (83.28%), Precision (85.04%), and Sensitivity (55.82%). 
+## Training Strategy
+The training was conducted in two stages: first training the top layers and then fine-tuning the entire network.
 
 ### Confusion Matrix
-![Confusion Matrix](./confusion_matrix.png)
+The matrix shows that while the model is excellent at detecting healthy cells (HEM), the sensitivity for leukemic cells (ALL) still has room for improvement (55.82%).
 
-*Figure 1: Confusion matrix illustrating the classification performance across healthy and ALL-positive samples.*
-
-## Repository Structure
-* **Acute_Lymphoblastic_Leukemia_Classifier.pdf**: Comprehensive technical report detailing the clinical background, experimental setup, and results discussion.
-* **Acute_Lymphoblastic_Leukemia_Classifier.ipynb**: Documented Jupyter Notebook containing the Python implementation using TensorFlow/Keras.
-* **confusion_matrix.png**: Visualization of the model evaluation results.
-
-## Accessing the Documentation
-The complete formal analysis is available in the accompanying paper:
-[Link to Technical Paper (PDF)](./Acute_Lymphoblastic_Leukemia_Classifier.pdf)
+![Confusion Matrix](./Confusion_matrix.png)
+*Figure 1: Model performance across classes.*
 
 ## Author
-**Marc Soria Ponseti** Biomedical Engineering | Deep Learning Research
+**Marc Soria Ponseti** Biomedical Engineering (UB) | Deep Learning Enthusiast
