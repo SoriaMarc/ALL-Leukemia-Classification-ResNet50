@@ -10,9 +10,9 @@ The model uses a **ResNet50** backbone with **Transfer Learning**. The main chal
 * **Specificity:** 96.00%
 * **Sensitivity:** 55.82% 
 
-## Key Files
-* [**Technical Paper (PDF)**](./Acute_Lymphoblastic_Leukemia_Classifier.pdf): Detailed analysis of the decisions made through the development of the model, results obtained and discussion. 
-* [**Implementation Notebook**](./Acute_Lymphoblastic_Leukemia_Classifier.ipynb): Documented Python code with TensorFlow/Keras.
+## Files
+* [**Accompanying Research Paper (PDF)**](./Acute_Lymphoblastic_Leukemia_Classifier.pdf): Detailed analysis of the decisions made through the development of the model, results obtained and discussion. 
+* [**Notebook**](./Acute_Lymphoblastic_Leukemia_Classifier.ipynb): Documented Python code with TensorFlow/Keras.
 
 ## Training Strategy
 The training was conducted in two stages: first training the top layers and then fine-tuning the entire network.
