@@ -21,6 +21,7 @@ The training was conducted in two stages: first training the top layers and then
 The matrix shows that while the model is excellent at detecting healthy cells (HEM), the sensitivity for leukemic cells (ALL) still has room for improvement (55.82%).
 
 ![Confusion Matrix](./Confusion_matrix.png)
+
 *Figure 1: Model performance across classes.*
 
 ## Author
